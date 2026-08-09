@@ -194,10 +194,22 @@ const sampleProperties = [
 ];
 
 const seedDB = async () => {
+  let mongoUri = process.env.MONGO_URI || 'mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/?appName=projects';
   try {
-    const mongoUri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/svs_real_estate';
     console.log(`Connecting to database for seeding: ${mongoUri}`);
     await mongoose.connect(mongoUri);
+  } catch (err) {
+    console.error(`Primary connection failed: ${err.message}`);
+    const fallbackUri = 'mongodb://127.0.0.1:27017/svs_real_estate';
+    if (mongoUri !== fallbackUri) {
+      console.log(`Attempting connection to local MongoDB fallback for seeding: ${fallbackUri}`);
+      await mongoose.connect(fallbackUri);
+    } else {
+      throw err;
+    }
+  }
+
+  try {
 
     // Clear existing data
     await Admin.deleteMany({});

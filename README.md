@@ -83,7 +83,7 @@ Create `.env` configuration files in both folders. Examples have been provided:
 Create `server/.env` and supply your variables:
 ```env
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/svs_real_estate
+MONGO_URI=mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/?appName=projects
 JWT_SECRET=your_jwt_secret_key_here
 
 # Optional: Add Cloudinary keys to activate cloud uploads
