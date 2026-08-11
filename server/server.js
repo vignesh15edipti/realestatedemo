@@ -14,7 +14,8 @@ const app = express();
 
 // Security / Middleware
 app.use(cors({
-  origin: '*', // For local development, allow all. In production, configure this correctly.
+  origin: process.env.CLIENT_URL,
+  //origin: '*', // For local development, allow all. In production, configure this correctly.
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
