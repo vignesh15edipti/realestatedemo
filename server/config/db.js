@@ -27,3 +27,6 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+
+// mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/
