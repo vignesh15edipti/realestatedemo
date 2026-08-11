@@ -1,14 +1,17 @@
 # Dependencies
-node_modules/
+client/node_modules/
+server/node_modules/
 
 # Environment variables
 .env
 .env.local
+.env.*.local
 .env.production
 .env.development
 
 # Frontend build
 client/dist/
+server/dist/
 
 # Backend uploads
 server/uploads/*
