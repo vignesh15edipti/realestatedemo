@@ -194,7 +194,7 @@ const sampleProperties = [
 ];
 
 const seedDB = async () => {
-  let mongoUri = process.env.MONGO_URI || 'mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/?appName=projects';
+  let mongoUri = process.env.MONGO_URI || 'mongodb+srv://vignesh1515official_db_user:8tOwri1ix8PSzL3K@projects.xqbabtx.mongodb.net/?appName=projects';
   try {
     console.log(`Connecting to database for seeding: ${mongoUri}`);
     await mongoose.connect(mongoUri);
