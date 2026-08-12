@@ -100,7 +100,7 @@ const generateDummyProperties = (count) => {
 
 const seedDummyData = async () => {
   try {
-    const mongoUri = process.env.MONGO_URI || 'mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/?appName=projects';
+    const mongoUri = process.env.MONGO_URI || 'mongodb+srv://vignesh1515official_db_user:8tOwri1ix8PSzL3K@projects.xqbabtx.mongodb.net/svs_real_estate';
     
     try {
       console.log(`Connecting to database to seed dummy data: ${mongoUri}`);
