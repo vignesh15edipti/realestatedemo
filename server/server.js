@@ -35,6 +35,17 @@ app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'SVS Real Estate API is running' });
 });
 
+// Temporary endpoint to run the seed script on the server
+app.get('/api/run-seed', async (req, res) => {
+  const { exec } = require('child_process');
+  exec('node scripts/seed.js', (error, stdout, stderr) => {
+    if (error) {
+      return res.status(500).json({ success: false, error: error.message, stderr });
+    }
+    res.json({ success: true, stdout });
+  });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('Error occurred in request processing:', err.stack);
