@@ -1,6 +1,6 @@
 //const VITE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-// const VITE_API_URL = import.meta.env.VITE_API_URL || 'https://realestatedemo-1realestate-backend.onrender.com/api';
-const VITE_API_URL = import.meta.env.VITE_API_URL || 'mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/';
+ const VITE_API_URL = import.meta.env.VITE_API_URL || 'https://realestatedemo-1realestate-backend.onrender.com/api';
+//const VITE_API_URL = import.meta.env.VITE_API_URL || 'mongodb+srv://vignesh1515official_db_user:O09eVlE2W596OhAo@projects.xqbabtx.mongodb.net/';
 
 import axios from 'axios';
 
